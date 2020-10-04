@@ -1,7 +1,8 @@
+
 "显示行号
 set nu
 
-"ls使用 utf-8 编码。
+"使用 utf-8 编码。
 set encoding=utf-8
 
 "不需要备份
@@ -43,5 +44,22 @@ set autoindent
 
 "启动显示状态行
 set laststatus=2
-
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+
+" 设置状态行显示常用信息
+" %F 完整文件路径名
+" %m 当前缓冲被修改标记
+" %m 当前缓冲只读标记
+" %h 帮助缓冲标记
+" %w 预览缓冲标记
+" %Y 文件类型
+" %b ASCII值
+" %B 十六进制值
+" %l 行数
+" %v 列数
+" %p 当前行数占总行数的的百分比
+" %L 总行数
+" %{&ff} 显示文件类型
+" 设置 laststatus = 0 ，不显式状态行
+" 设置 laststatus = 1 ，仅当窗口多于一个时，显示状态行
+"设置 laststatus = 2 ，总是显式状态行
